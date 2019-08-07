@@ -1,11 +1,11 @@
 Name                        = "Wordpress"
 Env                         = "Dev"
-Created_by                  = "Farrukh"
+Created_by                  = "Chyngyzkan"
 Dept                        = "IT"
-ami                         = "ami-0b898040803850657"
+ami                         = "ami-02f706d959cedf892"
 instance_type               = "t2.micro"
-key_name                    = "macbook_farrukh"
-region                      = "us-east-1"
+key_name                    = "myMac"
+region                      = "us-east-2"
 appname                     = "wordpress"
 min_app_size                = 6
 max_app_size                = 128
