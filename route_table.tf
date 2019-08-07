@@ -6,12 +6,10 @@ resource "aws_route_table" "r" {
     gateway_id = "${aws_internet_gateway.gw.id}"
   }
 
-  
-
- tags = {
-      Name       = "${var.Name}"
-      Env        = "${var.Env}"
+  tags = {
+      Name = "${var.Name}"
+      Env = "${var.Env}"
       Created_by = "${var.Created_by}"
-      Dept       = "${var.Dept}"
+      Dept = "${var.Dept}"
   }
 }
