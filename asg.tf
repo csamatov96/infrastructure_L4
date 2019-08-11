@@ -22,10 +22,10 @@ module "auto-scaling-group" {
   desired_capacity          = 4 #must be between of min_size and max_size 
   wait_for_capacity_timeout = 0
   
-  ##tags = {
-   #   Name = "${var.Name}"
-   #   Env = "${var.Env}"
-   #   Created_by = "${var.Created_by}"
-   #   Dept = "${var.Dept}"
-  #}
+  tags = {
+      Name = "${var.Name}"
+      Env = "${var.Env}"
+      Created_by = "${var.Created_by}"
+      Dept = "${var.Dept}"
+      }
 }
