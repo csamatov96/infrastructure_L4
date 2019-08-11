@@ -1,7 +1,7 @@
 terraform {
-    backend "s3" {
-        bucket = "terraform-state-storage-chyngyzkan" #
-        region =  "us-east-1" #
-        key = "infrastructure.tfstate" #
+    backend "s3" { #
+        bucket = "infrastructure-chyngyzkan" #paste whatever bucket u created through AWS-CLI
+        region =  "us-east-1" #its region
+        key = "infra.tfstate" #its new name 
     }
 }
