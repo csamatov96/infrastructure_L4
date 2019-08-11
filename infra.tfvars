@@ -1,3 +1,4 @@
+Name                     = "TEST"
 Name0                    = "Web"
 Name1                    = "DB"
 Env                     = "Dev"
