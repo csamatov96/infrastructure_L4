@@ -3,7 +3,7 @@ Env                     = "Dev"
 Created_by              = "JC"
 Dept                    = "IT"
 
-ami                     = "ami-02f706d959cedf892" #us-east-2
+ami                     = "ami-0d8f6eb4f641ef691" #us-east-2
 instance_type           = "t2.micro"
 key_name                = "myMac" #key from us-east-2, use any key u want 
 region                  = "us-east-1"
