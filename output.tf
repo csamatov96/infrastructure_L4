@@ -26,7 +26,7 @@ output "Region_NAME" {
   value = "${var.region}"
 }
 
-output "Used AMI" {
+output "Used_AMI" {
   value = "${var.ami}"
 }
 
