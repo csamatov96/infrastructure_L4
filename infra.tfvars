@@ -3,9 +3,9 @@ Env                     = "Dev"
 Created_by              = "JC"
 Dept                    = "IT"
 
-ami                     = "ami-0862aabda3fb488b5"
+ami                     = "ami-02f706d959cedf892" #us-east-2
 instance_type           = "t2.micro"
-key_name                = "my_WorkingStation" #key from us-east-1, use any key u want 
+key_name                = "myMac" #key from us-east-2, use any key u want 
 region                  = "us-east-1"
 
 #subnet_id               =
