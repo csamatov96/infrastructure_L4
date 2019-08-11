@@ -9,6 +9,8 @@ module "auto-scaling-group" {
   image_id        = "${var.ami}"
   instance_type   = "${var.instance_type}"
   security_groups = ["${aws_security_group.public.id}"]
+  key_name = "${file("~/.ssh/id_rsa.pub")}" #KEY OF WEB will be attached to them
+  associate_public_ip_address = "true" #so they'll be accessible
 
   
 
