@@ -16,9 +16,9 @@ module "auto-scaling-group" {
   asg_name                  = "my-auto-scaling-group"
   vpc_zone_identifier       = ["${aws_subnet.public.id}"]
   health_check_type         = "EC2"
-  min_size                  = 4
-  max_size                  = 128
-  desired_capacity          = 5
+  min_size                  = 3 #
+  max_size                  = 128 #
+  desired_capacity          = 4 #must be between of min_size and max_size 
   wait_for_capacity_timeout = 0
   
   ##tags = {

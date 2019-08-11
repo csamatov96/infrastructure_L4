@@ -1,4 +1,6 @@
-variable "Name" {}
+variable "Name0" {}
+variable "Name1" {}
+
 variable "Env" {}
 variable "Created_by" {}
 variable "Dept" {}

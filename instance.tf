@@ -10,7 +10,7 @@ resource "aws_instance" "web_instance" {
 
 
     tags = {
-      Name = "${var.Name}" #{count.index +1}" 
+      Name = "${var.Name0}" #{count.index +1}" 
       Env = "${var.Env}"
       Created_by = "${var.Created_by}"
       Dept = "${var.Dept}"
