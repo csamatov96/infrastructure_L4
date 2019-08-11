@@ -8,6 +8,7 @@ module "auto-scaling-group" {
   lc_name = "my-launch-configuration"
   image_id        = "${var.ami}"
   instance_type   = "${var.instance_type}"
+  key_name = "${var.key_name}" #
   security_groups = ["${aws_security_group.public.id}"]
   associate_public_ip_address = "true" #so they'll be accessible
 
