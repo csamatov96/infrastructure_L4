@@ -10,7 +10,11 @@ output "private_subnet" {
   value = "${aws_subnet.private.id}" #
 }
 
-output "Pub_Sec_Group" {
+output "Sec_Group" {
   value = "${aws_security_group.public.id}" #or description can be used 
+}
+
+output "Sec_Group" {
+  value = "${aws_security_group.private.id}" #or description can be used 
 }
 
