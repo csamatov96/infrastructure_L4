@@ -20,7 +20,7 @@ module "auto-scaling-group" {
   health_check_type         = "EC2"
   min_size                  = 3 #
   max_size                  = 128 #
-  desired_capacity          = 4 #must be between of min_size and max_size 
+  desired_capacity          = 4 #must be between 
   wait_for_capacity_timeout = 0
   
   tags_as_map = {
