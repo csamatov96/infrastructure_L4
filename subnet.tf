@@ -12,9 +12,9 @@ resource "aws_subnet" "public" {
 
 
 
-resource "aws_subnet" "private" {
-  vpc_id     = "${aws_vpc.my_custom_vpc.id}"
-  cidr_block = "10.0.2.0/24"
+resource "aws_subnet" "private" { #
+  vpc_id     = "${aws_vpc.my_custom_vpc.id}" #
+  cidr_block = "10.0.2.0/24" #254 IPs
 
   tags = {
       Name = "${var.Name}.private" #will be showen 

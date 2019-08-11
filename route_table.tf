@@ -1,9 +1,9 @@
 resource "aws_route_table" "r" {
-  vpc_id = "${aws_vpc.dev.id}"
+  vpc_id = "${aws_vpc.my_custom_vpc.id}" # 
 
-  route {
+  route { #only IPv4
     cidr_block = "0.0.0.0/0"
-    gateway_id = "${aws_internet_gateway.gw.id}"
+    gateway_id = "${aws_internet_gateway.my_IGW.id}"
   }
 
   tags = {

@@ -1,20 +1,20 @@
 resource "aws_security_group" "public" {
-  name        = "public"
+  name        = "public_Sec_Group"
   description = "Allow inbound traffic"
-  vpc_id      = "${aws_vpc.dev.id}"
+  vpc_id      = "${aws_vpc.my_custom_vpc.id}" #which VPC to attach to 
 
   ingress { #
     from_port   = 443
     to_port     = 443
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = ["0.0.0.0/0"] #so that port will be accessible to everyone 
   }
 
   ingress { #
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = ["0.0.0.0/0"] #custom IP can be used 
   }
 
   ingress { #
@@ -33,7 +33,7 @@ resource "aws_security_group" "public" {
 
 
   tags = {
-      Name = "${var.Name}.public"
+      Name = "${var.Name}.public" #will be showen  
       Env = "${var.Env}"
       Created_by = "${var.Created_by}"
       Dept = "${var.Dept}"
