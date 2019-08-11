@@ -18,3 +18,8 @@ output "Sec_Group" {
   value = "${aws_security_group.private.id}" #or description can be used 
 }
 
+output "key_name" {
+  value = "${var.key_name}"
+}
+
+
