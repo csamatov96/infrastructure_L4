@@ -1,4 +1,4 @@
-Name                    = "TEST"
+Name                    = "TESTING"
 Env                     = "Dev"
 Created_by              = "JC"
 Dept                    = "IT"
