@@ -2,11 +2,11 @@ output "VPC" {
   value = "${aws_vpc.my_custom_vpc.id}" #
 }
 
-output "public_subnet" {
+output "public_subnet0" {
   value = "${aws_subnet.public0.id}" #
 }
 
-output "public_subnet" {
+output "public_subnet1" {
   value = "${aws_subnet.public1.id}" #
 }
 
