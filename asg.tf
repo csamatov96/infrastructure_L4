@@ -29,28 +29,12 @@ module "my_asg" { #
 
   # Auto scaling group
   asg_name                  = "wordpress-asg"
-  vpc_zone_identifier       = ["${aws_subnet.public0.id}", "${aws_subnet.public1.id}", "${aws_subnet.public2.id}"] #3 public subnets 
+  vpc_zone_identifier       = ["${aws_subnet.public0.id}", "${aws_subnet.public1.id}", "${aws_subnet.public2.id}"] #3 public subnets added
   health_check_type         = "EC2"
-  min_size                  = 0
-  max_size                  = 1
-  desired_capacity          = 1
+  min_size                  = 3
+  max_size                  = 128
+  desired_capacity          = 4
   wait_for_capacity_timeout = 0
 
-  tags = [
-    {
-      key                 = "Environment"
-      value               = "dev"
-      propagate_at_launch = true
-    },
-    {
-      key                 = "Project"
-      value               = "megasecret"
-      propagate_at_launch = true
-    },
-  ]
-
-  tags_as_map = {
-    extra_tag1 = "extra_value1"
-    extra_tag2 = "extra_value2"
-  }
+  
 }
