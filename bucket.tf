@@ -1,3 +1,3 @@
-resource "aws_s3_bucket" "bucket-name-A" {
-    bucket = "infrastructure-L3-chyngyzkan-A"
+resource "aws_s3_bucket" "bucket-name-a" {
+    bucket = "infrastructure-L3-chyngyzkan-a"
 }
