@@ -1,6 +1,6 @@
 module "ec2_instance_byModule" {
   source                 = "terraform-aws-modules/ec2-instance/aws" #pull the following from Terraform registry 
-  version                = "~> 3.0"
+  version                = "~> 2.6"
 
   name                   = "ec2_instance_byModule"
   instance_count         = 3 #
