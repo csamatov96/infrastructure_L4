@@ -1,4 +1,4 @@
-resource "aws_subnet" "public" {
+resource "aws_subnet" "public0" {
   vpc_id     = "${aws_vpc.my_custom_vpc.id}" #will be attached 
   cidr_block = "10.0.1.0/24" #254 IPs 
 
@@ -10,7 +10,7 @@ resource "aws_subnet" "public" {
   }
 }
 
-resource "aws_subnet" "public" {
+resource "aws_subnet" "public1" {
   vpc_id     = "${aws_vpc.my_custom_vpc.id}" #will be attached 
   cidr_block = "10.0.1.0/24" #254 IPs 
 
