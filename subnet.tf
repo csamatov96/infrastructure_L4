@@ -3,7 +3,7 @@ resource "aws_subnet" "public0" {
   cidr_block = "10.0.1.0/24" #254 IPs 
 
   tags = {
-      Name = "${var.Name}.public" #will be showen 
+      Name = "${var.Name}.public0" #will be showen 
       Env = "${var.Env}"
       Created_by = "${var.Created_by}"
       Dept = "${var.Dept}"
@@ -15,7 +15,7 @@ resource "aws_subnet" "public1" {
   cidr_block = "10.0.16.0/25" #254 IPs 
 
   tags = {
-      Name = "${var.Name}.public" #will be showen 
+      Name = "${var.Name}.public1" #will be showen 
       Env = "${var.Env}"
       Created_by = "${var.Created_by}"
       Dept = "${var.Dept}"
@@ -27,7 +27,7 @@ resource "aws_subnet" "public2" {
   cidr_block = "10.0.32.0/26" #254 IPs 
 
   tags = {
-      Name = "${var.Name}.public" #will be showen 
+      Name = "${var.Name}.public2" #will be showen 
       Env = "${var.Env}"
       Created_by = "${var.Created_by}"
       Dept = "${var.Dept}"
