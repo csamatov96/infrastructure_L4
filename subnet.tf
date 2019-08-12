@@ -22,6 +22,18 @@ resource "aws_subnet" "public1" {
   }
 }
 
+resource "aws_subnet" "public2" {
+  vpc_id     = "${aws_vpc.my_custom_vpc.id}" #will be attached 
+  cidr_block = "10.0.1.0/24" #254 IPs 
+
+  tags = {
+      Name = "${var.Name}.public" #will be showen 
+      Env = "${var.Env}"
+      Created_by = "${var.Created_by}"
+      Dept = "${var.Dept}"
+  }
+}
+
 
 
 resource "aws_subnet" "private" { #

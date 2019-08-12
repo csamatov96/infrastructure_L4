@@ -29,7 +29,7 @@ module "my_asg" { #
 
   # Auto scaling group
   asg_name                  = "wordpress-asg"
-  vpc_zone_identifier       = ["subnet-1235678", "subnet-87654321"]
+  vpc_zone_identifier       = ["${aws_subnet.public0.id}", "${aws_subnet.public1.id}", "${aws_subnet.public2.id}"] #3 public subnets 
   health_check_type         = "EC2"
   min_size                  = 0
   max_size                  = 1
