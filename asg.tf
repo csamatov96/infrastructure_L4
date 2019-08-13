@@ -1,11 +1,11 @@
-module "${}" { #
+module "${var.app_name}" { #
   source  = "terraform-aws-modules/autoscaling/aws"
   version = "~> 3.0"
   
   name = "wordpress"
 
   # Launch configuration
-  lc_name = "wordpress-lc"
+  lc_name = "${var.app_name}-lc"
 
   image_id        = "${var.ami}"
   instance_type   = "${var.instance_type}"
@@ -28,7 +28,7 @@ module "${}" { #
 #  ]
 
   # Auto scaling group
-  asg_name                  = "wordpress-asg"
+  asg_name                  = "${var.app_name}-asg"
   vpc_zone_identifier       = ["${aws_subnet.public0.id}"] #, "${aws_subnet.public1.id}", "${aws_subnet.public2.id}" 3 public subnets added
   health_check_type         = "EC2"
   min_size                  = 6 #
