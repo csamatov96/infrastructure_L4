@@ -14,3 +14,7 @@ app_name                = "wordpress-lc"
 #subnet_id               =
 #user_data               = "userdata.sh" #pointing to it
 #count_                   = "3"
+
+min_size                  = 6 #
+max_size                  = 128
+desired_capacity          = 6

@@ -31,9 +31,9 @@ module "my_asg_for_DB" { #
   asg_name                  = "mysql-asg"
   vpc_zone_identifier       = ["${aws_subnet.private.id}"] #, "${aws_subnet.public1.id}", "${aws_subnet.public2.id}" 3 public subnets added
   health_check_type         = "EC2"
-  min_size                  = 3 #
-  max_size                  = 6
-  desired_capacity          = 3
+  min_size                  = "${var.min_size}" #
+  max_size                  = "${var.max_size}"
+  desired_capacity          = "${var.desired_capacity}"
   wait_for_capacity_timeout = 0
 
   tags_as_map = { #don't forget to put EQUAL SIGN 

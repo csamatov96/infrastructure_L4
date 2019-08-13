@@ -13,3 +13,8 @@ variable "instance_type" {}
 variable "key_name" {}
 
 variable "app_name" {}
+
+variable "min_size" {}                  
+variable "max_size" {}                 
+variable "desired_capacity" {}
+
