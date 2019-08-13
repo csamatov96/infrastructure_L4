@@ -31,9 +31,9 @@ module "wordpress" { #
   asg_name                  = "${var.app_name}-asg"
   vpc_zone_identifier       = ["${aws_subnet.public0.id}"] #, "${aws_subnet.public1.id}", "${aws_subnet.public2.id}" 3 public subnets added
   health_check_type         = "EC2"
-  min_size                  = 6 #
-  max_size                  = 128
-  desired_capacity          = 6
+  min_size                  = "${var.min_app_size}"#
+  max_size                  = "${var.max_app_size}"
+  desired_capacity          = "${var.desired_app_capacity}"
   wait_for_capacity_timeout = 0
 
   tags_as_map = { #don't forget to put EQUAL SIGN 
