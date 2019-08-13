@@ -36,5 +36,12 @@ module "my_asg" { #
   desired_capacity          = 4
   wait_for_capacity_timeout = 0
 
+  tags_as_map = { #don't forget to put EQUAL SIGN 
+      Name = "${var.Name}" #binding 
+      Env = "${var.Env}" #
+      Created_by = "${var.Created_by}" # 
+      Dept = "${var.Dept}" #
+  }
+
   
 }
