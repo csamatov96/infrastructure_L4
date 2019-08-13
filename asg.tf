@@ -1,4 +1,4 @@
-module "my_asg" { #
+module "${}" { #
   source  = "terraform-aws-modules/autoscaling/aws"
   version = "~> 3.0"
   

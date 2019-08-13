@@ -1,3 +1,5 @@
+variable "region" {}
+
 variable "Name" {}
 variable "Name0" {}
 variable "Name1" {}
@@ -10,8 +12,4 @@ variable "ami" {}
 variable "instance_type" {}
 variable "key_name" {}
 
-#variable "user_data" {}
-
-#variable "count_" {}
-
-variable "region" {}
+variable "app_name" {}
